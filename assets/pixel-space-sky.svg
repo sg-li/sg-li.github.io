@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 850" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="night" x2="0" y2="1">
+      <stop stop-color="#090e28"/><stop offset=".56" stop-color="#111737"/><stop offset="1" stop-color="#17143d"/>
+    </linearGradient>
+    <filter id="pixelGlow" x="-50%" y="-80%" width="200%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <g id="twinkle" shape-rendering="crispEdges">
+      <rect x="5" y="0" width="4" height="15"/><rect y="5" width="14" height="4"/>
+      <rect x="2" y="2" width="3" height="3"/><rect x="9" y="9" width="3" height="3"/>
+    </g>
+    <g id="pixelStar" shape-rendering="crispEdges">
+      <rect x="3" y="0" width="5" height="5"/><rect x="0" y="3" width="11" height="5"/><rect x="3" y="6" width="5" height="5"/>
+    </g>
+  </defs>
+  <rect width="1440" height="850" fill="url(#night)"/>
+
+  <!-- Pixel nebulae: quiet behind the text, brighter around the island -->
+  <g shape-rendering="crispEdges" opacity=".34">
+    <path fill="#382467" d="M650 80h120v24h72v24h74v24h55v34h-48v28h-74v26h-96v-24h-93v-30h-78v-26h55v-25h62z"/>
+    <path fill="#263d75" d="M880 243h73v-26h98v23h95v27h86v25h-52v31h-114v25h-94v-19h-92v-31h-86v-25h64z"/>
+    <path fill="#52265f" d="M600 550h92v-25h78v23h87v29h75v28h-49v27h-107v24h-98v-22h-90v-30h-72v-24h84z"/>
+    <path fill="#224364" d="M1040 600h74v-23h98v24h103v28h76v25h-61v30h-97v26h-98v-25h-92v-24h-64v-29h61z"/>
+  </g>
+  <g shape-rendering="crispEdges" opacity=".26" fill="#9176d8">
+    <rect x="761" y="129" width="58" height="18"/><rect x="820" y="148" width="38" height="16"/><rect x="712" y="161" width="43" height="15"/>
+    <rect x="1004" y="292" width="54" height="18"/><rect x="1059" y="310" width="41" height="15"/><rect x="934" y="319" width="61" height="13"/>
+    <rect x="717" y="578" width="47" height="17"/><rect x="766" y="595" width="60" height="16"/><rect x="670" y="612" width="43" height="13"/>
+  </g>
+
+  <!-- Far stars, built from pixel clusters rather than a dot texture -->
+  <g fill="#fff1bb" opacity=".9" shape-rendering="crispEdges">
+    <use href="#twinkle" x="613" y="91"/><use href="#pixelStar" x="843" y="63"/>
+    <use href="#pixelStar" x="1090" y="105"/><use href="#twinkle" x="1368" y="182"/>
+    <use href="#twinkle" x="688" y="244"/><use href="#pixelStar" x="919" y="175"/>
+    <use href="#pixelStar" x="1279" y="314"/><use href="#twinkle" x="1400" y="390"/>
+    <use href="#twinkle" x="847" y="414"/><use href="#pixelStar" x="1034" y="524"/>
+    <use href="#twinkle" x="637" y="713"/><use href="#pixelStar" x="871" y="752"/>
+    <use href="#twinkle" x="1162" y="718"/><use href="#pixelStar" x="1350" y="648"/>
+  </g>
+  <g fill="#96dff3" opacity=".9" shape-rendering="crispEdges">
+    <rect x="735" y="197" width="7" height="7"/><rect x="981" y="86" width="6" height="6"/>
+    <rect x="1209" y="222" width="8" height="8"/><rect x="785" y="356" width="6" height="6"/>
+    <rect x="971" y="679" width="8" height="8"/><rect x="1318" y="523" width="6" height="6"/>
+  </g>
+  <g fill="#ff9ac4" opacity=".92" shape-rendering="crispEdges">
+    <rect x="896" y="120" width="8" height="8"/><rect x="1121" y="433" width="6" height="6"/>
+    <rect x="772" y="493" width="7" height="7"/><rect x="1252" y="598" width="8" height="8"/>
+  </g>
+
+  <!-- Three golden pixel trails, like an 8-bit ship moving across the sky -->
+  <g fill="#ffd36b" filter="url(#pixelGlow)" shape-rendering="crispEdges" opacity=".55">
+    <path d="M515 192h255v7H566v6H515zM578 215h236v7H632v6h-54zM628 238h217v7H684v6h-56z"/>
+  </g>
+  <g fill="#ffe88d" shape-rendering="crispEdges">
+    <path d="M515 192h255v7H566v6H515zM578 215h236v7H632v6h-54zM628 238h217v7H684v6h-56z"/>
+  </g>
+  <g fill="#fff7d0" shape-rendering="crispEdges" opacity=".85">
+    <rect x="515" y="192" width="36" height="7"/><rect x="578" y="215" width="44" height="7"/><rect x="628" y="238" width="46" height="7"/>
+  </g>
+
+  <!-- Large ringed planet in the lower-left corner -->
+  <g shape-rendering="crispEdges">
+    <path d="M27 711h32v-8h45v-9h61v8h47v9h37v9h31v10h-36v9h-46v9h-58v-8h-48v-9H68v-8H27z" fill="#6755a9"/>
+    <path d="M41 710h39v-8h45v8h52v8h41v8h37v8h-43v8h-54v-8h-48v-8H78v-8H41z" fill="#76d3dc"/>
+    <path d="M67 710h34v-8h44v8h50v8h-49v8h-49v-8H67z" fill="#f3b5d6"/>
+    <path d="M95 676h16v-19h23v-18h35v-13h39v13h27v18h18v22h13v31h-14v24h-24v16h-39v10h-37v-11h-31v-16h-24v-23H80v-28h15z" fill="#241f56" stroke="#0a102b" stroke-width="8"/>
+    <path d="M104 676h16v-19h22v-18h35v-13h32v13h27v18h18v22h12v27h-14v23h-23v16h-36v10h-29v-11h-30v-16h-22v-23H95v-27h9z" fill="#e98db9"/>
+    <path d="M122 666h31v-10h25v-10h27v13h-23v9h-29v11h-31zM210 701h28v10h-28zM149 741h25v8h-25z" fill="#b45f9f"/>
+    <path d="M45 716h38v7H45zm210 20h35v8h-35z" fill="#ffe88d"/>
+    <path d="M96 710h38v7h-38zm158 17h28v7h-28z" fill="#fff0c2"/>
+  </g>
+
+  <!-- Smaller aqua planet in the opposite upper-right corner -->
+  <g shape-rendering="crispEdges">
+    <path d="M1244 106h14V91h20V77h34V66h26v12h20v16h14v22h-12v17h-18v13h-30v9h-27v-9h-22v-15h-19v-20h-10z" fill="#142044" stroke="#0a102b" stroke-width="6"/>
+    <path d="M1253 106h14V92h19V79h30V68h19v11h20v16h14v18h-12v16h-18v13h-27v9h-20v-9h-22v-15h-18v-20h-10z" fill="#72ced8"/>
+    <path d="M1286 80h26v8h-18v8h-17v-8h9zm36 40h23v8h-23zm-43 19h19v7h-19z" fill="#489fb6"/>
+    <path d="M1332 91h20v8h-20zm-70 23h15v8h-15z" fill="#b9a1f2"/>
+    <path d="M1306 74h13v8h-13z" fill="#fff1bb"/>
+  </g>
+
+  <!-- Pixel satellite stays below the title area -->
+  <g transform="translate(1320 326)" shape-rendering="crispEdges" stroke="#11162f" stroke-width="5">
+    <rect x="-77" y="-22" width="49" height="45" fill="#57b9d2"/>
+    <rect x="29" y="-22" width="49" height="45" fill="#57b9d2"/>
+    <path d="M-68-13h13v12h-13zm25 0h12v12h-12zm-25 24h13v10h-13zm25 0h12v10h-12zM43-13h13v12H43zm25 0h12v12H68zM43 11h13v10H43zm25 0h12v10H68z" fill="#c5f1ed" stroke="none"/>
+    <path d="M-28 0h22m38 0h-21" stroke="#f7efff" stroke-width="8"/>
+    <rect x="-7" y="-31" width="37" height="62" fill="#8d79c7"/>
+    <rect x="1" y="-14" width="20" height="28" fill="#ffd36b"/>
+    <rect x="-4" y="-42" width="8" height="11" fill="#f8f1d8"/><rect x="24" y="-42" width="8" height="11" fill="#f8f1d8"/>
+  </g>
+</svg>
